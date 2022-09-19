@@ -1,15 +1,24 @@
 import { Article } from '../../interfaces/RecordEntities';
 import { RecordIndex } from '../Record';
 import { ArticleListItem } from './ListItem';
+import { ArticleFormFields } from './FormFields';
 
 export const ArticleIndex: React.FC = () => {
-    const apiOptions = { relations: ['author']};
+	const apiOptions = { relations: ['author'] };
 
-    return (
-        <RecordIndex<Article>
-            ListItem={ArticleListItem}
-            apiPath='articles'
-            apiOptions={apiOptions}
-            />
-    )
-}
+	const emptyRecord = {
+		title: '',
+		record: '',
+		text: '',
+	};
+
+	return (
+		<RecordIndex<Article>
+			ListItem={ArticleListItem}
+			apiPath="articles"
+			apiOptions={apiOptions}
+			FormFields={ArticleFormFields}
+			emptyRecord={emptyRecord}
+		/>
+	);
+};
