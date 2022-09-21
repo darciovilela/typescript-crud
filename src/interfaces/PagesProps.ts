@@ -1,6 +1,7 @@
 import React from "react";
 import { Action } from '../hooks/useMutations';
 import { IChangeElement } from "../hooks/useForm";
+import { AxiosError } from "axios";
 
 
 export interface RecordIndexProps<T> {
@@ -17,6 +18,8 @@ export interface RecordListProps<T> {
     emptyRecord: T;
     activeRecord: T;
     setActiveRecord: Function;
+    loading: boolean;
+    error?: AxiosError;
 }
 
 // record type T can be article or author
