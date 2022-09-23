@@ -1,20 +1,40 @@
-import axios from 'axios';
+import { findAllByTestId } from '@testing-library/react';
+import axios, { AxiosError } from 'axios';
+import { useState } from 'react';
 import { Record } from '../interfaces/RecordEntities';
 
 export type Action<T> = (record: T) => Promise<void>;
 
 export const useMutation = <T extends Record>(path: string, callback?: Function) => {
+    const [processing, setProcessing] = useState<boolean>(false);
+    const [success, setSuccess] = useState<boolean>();
+    const [error, setError] = useState<AxiosError>();
+
+
     const url = `${process.env.REACT_APP_API}/${path}`;
 
     const wrap = (fn: Action<T>) => {
         return async (record: T) => {
+            setProcessing(true);
+            setSuccess(undefined);
+            setError(undefined);
             fn(record).then(() => {
+                setSuccess(true);
                 if (callback) {
                     callback();
                 }
             })
-        }
-    }
+                .catch((error: Error) => {
+                    setSuccess(false);
+                    setError(error as AxiosError);
+
+            })
+
+            .finally(() => {
+                setProcessing(false);
+            })
+        };
+    };
 
 
 const create: Action<T> = wrap(async (record: T) => {
@@ -32,6 +52,10 @@ const remove: Action<T> = wrap(async (record: T) => {
 return {
     create,
     update,
-    remove
+    remove,
+    processing,
+    success,
+    error,
+    setError
 };
 };

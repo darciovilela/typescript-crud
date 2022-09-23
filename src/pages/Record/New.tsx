@@ -7,6 +7,7 @@ export const RecordNew = <T extends Record>({
 	FormFields,
 	activeRecord,
 	create,
+	success,
 }: RecordNewProps<T>) => {
 	return (
 		<div className="new">
