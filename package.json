@@ -2,6 +2,7 @@
   "name": "typescript-crud",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/typescript-crud",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -12,6 +13,7 @@
     "@types/react-dom": "^18.0.6",
     "axios": "^0.27.2",
     "class-validator": "^0.13.2",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
