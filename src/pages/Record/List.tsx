@@ -2,7 +2,7 @@ import { Record } from '../../interfaces/RecordEntities';
 import { RecordListProps } from '../../interfaces/PagesProps';
 import { usePage } from '../../contexts/Page';
 import { Status } from '../../components/Status';
-// import { RecordError } from '../../components/RecordError';
+import { RecordError } from '../../components/RecordError';
 
 export const RecordList = <T extends Record>({
 	ListItem,
@@ -17,7 +17,7 @@ export const RecordList = <T extends Record>({
 
 	return (
 		<div className="list">
-			{/* {error && <RecordError error={error} />} */}
+			{error && <RecordError error={error} />}
 			<div>
 				<h2>{page}</h2>
 				<button className="bt-new" onClick={() => setActiveRecord(emptyRecord)}>

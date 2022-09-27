@@ -5,7 +5,7 @@ import { RecordNew } from './New';
 import { RecordEdit } from './Edit';
 import { useMutation } from '../../hooks/useMutations';
 import { Status } from '../../components/Status';
-// import { RecordError } from '../../components/RecordError';
+import { RecordError } from '../../components/RecordError';
 
 export const RecordMutations = <T extends Record>({
 	FormFields,
@@ -24,7 +24,7 @@ export const RecordMutations = <T extends Record>({
 
 	return (
 		<div className="mutations">
-			{/* {error && <RecordError error={error} />} */}
+			{error && <RecordError error={error} />}
 			{activeRecord.id ? (
 				<RecordEdit<T>
 					FormFields={FormFields}
