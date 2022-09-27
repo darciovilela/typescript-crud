@@ -1,4 +1,3 @@
-import { findAllByTestId } from '@testing-library/react';
 import axios, { AxiosError } from 'axios';
 import { useState } from 'react';
 import { Record } from '../interfaces/RecordEntities';
