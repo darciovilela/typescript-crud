@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/typescript-crud/static/css/main.3bbd42d7.css",
-    "main.js": "/typescript-crud/static/js/main.d61ff291.js",
+    "main.css": "/typescript-crud/static/css/main.0e19b7c6.css",
+    "main.js": "/typescript-crud/static/js/main.1c4d1609.js",
     "static/js/787.1d58dd15.chunk.js": "/typescript-crud/static/js/787.1d58dd15.chunk.js",
     "index.html": "/typescript-crud/index.html",
-    "main.3bbd42d7.css.map": "/typescript-crud/static/css/main.3bbd42d7.css.map",
-    "main.d61ff291.js.map": "/typescript-crud/static/js/main.d61ff291.js.map",
+    "main.0e19b7c6.css.map": "/typescript-crud/static/css/main.0e19b7c6.css.map",
+    "main.1c4d1609.js.map": "/typescript-crud/static/js/main.1c4d1609.js.map",
     "787.1d58dd15.chunk.js.map": "/typescript-crud/static/js/787.1d58dd15.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bbd42d7.css",
-    "static/js/main.d61ff291.js"
+    "static/css/main.0e19b7c6.css",
+    "static/js/main.1c4d1609.js"
   ]
 }
