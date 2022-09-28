@@ -1,7 +1,6 @@
 import { Record } from '../../interfaces/RecordEntities';
 import { RecordNewProps } from '../../interfaces/PagesProps';
 import { RecordForm } from './Form';
-import { create } from 'domain';
 
 export const RecordNew = <T extends Record>({
 	FormFields,
@@ -16,6 +15,7 @@ export const RecordNew = <T extends Record>({
 				FormFields={FormFields}
 				activeRecord={activeRecord}
 				submitAction={create}
+				success={success}
 			/>
 		</div>
 	);
