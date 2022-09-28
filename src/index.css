@@ -59,6 +59,7 @@ header .subtitle {
   color: #fff;
   background: transparent;
   border: 1px solid #fff;
+  cursor: pointer;
 }
 
 .navigation button.active {
@@ -69,6 +70,10 @@ header .subtitle {
 .navigation a.button {
   text-decoration: none;
   margin-right: 0;
+}
+
+.navigation a.button:hover {
+  background: #28853e;
 }
 
 h1,
@@ -219,6 +224,7 @@ button.bt-new {
   color: #0f0;
   background: transparent;
   border: 1px solid #0f0;
+  cursor: pointer;
 }
 
 button.bt-remove {
