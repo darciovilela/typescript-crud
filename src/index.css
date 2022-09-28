@@ -233,6 +233,7 @@ button.bt-remove {
   border: 1px solid #f00;
   float: right;
   margin-right: 0;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
